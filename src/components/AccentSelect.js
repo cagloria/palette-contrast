@@ -1,15 +1,45 @@
-import React from "react";
-import ColorSelect from "./ColorSelect";
+import React, { useState, useEffect } from "react";
+import AccentColorScheme from "./AccentColorScheme";
+import tinycolor from "tinycolor2";
 
-function AccentSelect({ color, onAccentChange }) {
-    function handleAccentChange(value) {
-        onAccentChange(value);
+function AccentSelect({ primary, color, onAccentChange }) {
+    const [value, setValue] = useState(color);
+    const [analogous, setAnalogous] = useState([]);
+
+    useEffect(() => {
+        if (analogous.length <= 0) {
+            getAnalogousColors();
+        }
+    });
+
+    function handleAccentChange(event) {
+        setValue(event.target.value);
+        onAccentChange(event.target.value);
+    }
+
+    function getAnalogousColors() {
+        const options = tinycolor(primary).analogous();
+        let hexCodes = [];
+        options.forEach((obj) => {
+            const color = obj.toHexString();
+            if (!hexCodes.includes(color)) {
+                hexCodes.push(color);
+            }
+        });
+        setAnalogous([...hexCodes]);
     }
 
     return (
         <section className="accent-select">
             <h2>Accent select</h2>
-            <ColorSelect color={color} onColorChange={handleAccentChange} />
+            <AccentColorScheme name="Analogous" colors={analogous} />
+            <input
+                className="color-select__input"
+                type="text"
+                name="color-input"
+                value={value}
+                onChange={handleAccentChange}
+            />
         </section>
     );
 }

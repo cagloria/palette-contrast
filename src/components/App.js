@@ -21,7 +21,11 @@ function App() {
                 color={primary}
                 onPrimaryChange={handlePrimaryChange}
             />
-            <AccentSelect color={accent} onAccentChange={handleAccentChange} />
+            <AccentSelect
+                primary={primary}
+                color={accent}
+                onAccentChange={handleAccentChange}
+            />
             <Contrast primary={primary} accent={accent} />
         </div>
     );
