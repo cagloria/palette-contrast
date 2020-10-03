@@ -4,9 +4,17 @@ import PrimarySelect from "./PrimarySelect";
 function App() {
     const [primary, setPrimary] = useState("#CCCCCC");
 
+    function handlePrimaryChange(value) {
+        setPrimary(value);
+    }
+
     return (
         <div className="App">
-            <PrimarySelect color={primary} />
+            <h2>Primary Color</h2>
+            <PrimarySelect
+                color={primary}
+                onPrimaryChange={handlePrimaryChange}
+            />
         </div>
     );
 }
