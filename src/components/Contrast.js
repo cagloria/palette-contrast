@@ -12,6 +12,9 @@ function Contrast({ primary, accent }) {
 
             <h3>Text on primary</h3>
             <TextContrast bgColor={primary} />
+
+            <h3>Text on accent</h3>
+            <TextContrast bgColor={accent} />
         </section>
     );
 }
