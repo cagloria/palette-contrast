@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PrimarySelect from "./PrimarySelect";
+import Contrast from "./Contrast";
 
 function App() {
     const [primary, setPrimary] = useState("#CCCCCC");
@@ -10,11 +11,11 @@ function App() {
 
     return (
         <div className="App">
-            <h2>Primary Color</h2>
             <PrimarySelect
                 color={primary}
                 onPrimaryChange={handlePrimaryChange}
             />
+            <Contrast primary={primary} />
         </div>
     );
 }

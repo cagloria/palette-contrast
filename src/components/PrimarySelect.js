@@ -7,9 +7,10 @@ function PrimarySelect({ color, onPrimaryChange }) {
     }
 
     return (
-        <div className="primary-select">
+        <section className="primary-select">
+            <h2>Primary select</h2>
             <ColorSelect color={color} onColorChange={handlePrimaryChange} />
-        </div>
+        </section>
     );
 }
 
