@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Panel = styled.div`
@@ -9,10 +9,22 @@ const Panel = styled.div`
 `;
 
 function ColorSelect({ color }) {
+    const [value, setValue] = useState(color);
+
+    function handleColorChange(event) {
+        setValue(event.target.value);
+    }
+
     return (
         <>
             <Panel color={color} />
-            <div>{color}</div>
+            <input
+                className="color-select__input"
+                type="text"
+                name="color-input"
+                value={value}
+                onChange={handleColorChange}
+            />
         </>
     );
 }
