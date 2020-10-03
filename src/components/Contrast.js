@@ -7,6 +7,8 @@ function Contrast({ primary }) {
         <section className="contrast">
             <h2>Contrast check</h2>
             <GraphicContrast color1={primary} />
+
+            <h3>Text on primary</h3>
             <TextContrast bgColor={primary} />
         </section>
     );

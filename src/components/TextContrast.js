@@ -9,7 +9,7 @@ const Panel = styled.div`
 `;
 
 function TextContrast({ bgColor }) {
-    return <Panel color={bgColor}></Panel>;
+    return <Panel color={bgColor}>Lorem ipsum dolor sit amet.</Panel>;
 }
 
 export default TextContrast;
