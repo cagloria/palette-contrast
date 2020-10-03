@@ -33,10 +33,13 @@ function AccentSelect({ primary, color, onAccentChange }) {
         <section className="accent-select">
             <h2>Accent select</h2>
             <AccentColorScheme name="Analogous" colors={analogous} />
+
+            <label htmlFor="accent-input">Or add a custom color:</label>
             <input
                 className="color-select__input"
                 type="text"
-                name="color-input"
+                name="accent-input"
+                id="accent-input"
                 value={value}
                 onChange={handleAccentChange}
             />

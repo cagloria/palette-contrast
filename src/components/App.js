@@ -4,7 +4,7 @@ import AccentSelect from "./AccentSelect";
 import Contrast from "./Contrast";
 
 function App() {
-    const [primary, setPrimary] = useState("#CCCCCC");
+    const [primary, setPrimary] = useState("#10a381");
     const [accent, setAccent] = useState("#b50c00");
 
     function handlePrimaryChange(value) {
