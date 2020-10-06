@@ -1,27 +1,38 @@
 import React, { useState } from "react";
 import AccentColorScheme from "./AccentColorScheme";
 
-function AccentSelect({ primary, color, onAccentChange }) {
-    const [value, setValue] = useState(color);
+function AccentSelect({ primary, accent, onAccentChange }) {
+    const [selectedAccent, setValue] = useState(accent);
 
-    function handleAccentChange(event) {
+    function handleAccentFieldChange(event) {
         setValue(event.target.value);
         onAccentChange(event.target.value);
+    }
+
+    function handleAccentButtonSelect(color) {
+        setValue(color);
+        onAccentChange(color);
     }
 
     return (
         <section className="accent-select">
             <h2>Accent select</h2>
-            <AccentColorScheme scheme="Analogous" primary={primary} />
+            <p>Choose an accent color:</p>
 
-            <label htmlFor="accent-input">Or add a custom color:</label>
+            <AccentColorScheme
+                schemeName="Analogous"
+                primary={primary}
+                onAccentSelect={handleAccentButtonSelect}
+            />
+
+            <label htmlFor="accent-input">Or type in a custom color:</label>
             <input
                 className="color-select__input"
                 type="text"
                 name="accent-input"
                 id="accent-input"
-                value={value}
-                onChange={handleAccentChange}
+                value={selectedAccent}
+                onChange={handleAccentFieldChange}
             />
         </section>
     );

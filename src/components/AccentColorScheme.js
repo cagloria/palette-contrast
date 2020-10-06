@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
+import AccentButton from "./AccentButton";
 import styled from "styled-components";
 import tinycolor from "tinycolor2";
-
-const Color = styled.button`
-    width: 50px;
-    height: 50px;
-    background-color: ${(props) => props.color};
-    border: 0;
-    border-radius: 8px;
-`;
 
 const SchemeContainer = styled.div`
     display: flex;
@@ -43,21 +36,29 @@ const schemeSelect = {
     },
 };
 
-function AccentColorScheme({ primary, scheme }) {
-    const [colors, setColors] = useState(
-        schemeSelect[scheme].getScheme(primary)
+function AccentColorScheme({ primary, schemeName, onAccentSelect }) {
+    const [colorsInScheme, setColors] = useState(
+        schemeSelect[schemeName].getScheme(primary)
     );
 
     useEffect(() => {
-        setColors(schemeSelect[scheme].getScheme(primary));
-    }, [primary, scheme]);
+        setColors(schemeSelect[schemeName].getScheme(primary));
+    }, [primary, schemeName]);
+
+    function handleAccentSelect(color) {
+        onAccentSelect(color);
+    }
 
     return (
         <div>
-            <h3>{scheme}</h3>
+            <h3>{schemeName}</h3>
             <SchemeContainer>
-                {colors.map((color) => (
-                    <Color color={color} key={color}></Color>
+                {colorsInScheme.map((color) => (
+                    <AccentButton
+                        color={color}
+                        key={color}
+                        onAccentSelect={handleAccentSelect}
+                    />
                 ))}
             </SchemeContainer>
         </div>

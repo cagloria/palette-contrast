@@ -23,7 +23,7 @@ function App() {
             />
             <AccentSelect
                 primary={primary}
-                color={accent}
+                accent={accent}
                 onAccentChange={handleAccentChange}
             />
             <Contrast primary={primary} accent={accent} />
