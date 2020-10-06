@@ -14,20 +14,31 @@ const SchemeContainer = styled.div`
     display: flex;
 `;
 
+/**
+ * Converts an array of tinycolor objects to hex codes.
+ * @param {Object} objArr Array of tinycolor objects
+ */
+function getHexCodes(objArr) {
+    let hexCodes = [];
+
+    objArr.forEach((obj) => {
+        const color = obj.toHexString();
+        if (!hexCodes.includes(color)) {
+            hexCodes.push(color);
+        }
+    });
+
+    return hexCodes;
+}
+
+/**
+ * Returns an array of accent colors based on the primary.
+ */
 const schemeSelect = {
     Analogous: {
         getScheme(primary) {
-            const colorObj = tinycolor(primary).analogous();
-            let hexCodes = [];
-
-            colorObj.forEach((obj) => {
-                const color = obj.toHexString();
-                if (!hexCodes.includes(color)) {
-                    hexCodes.push(color);
-                }
-            });
-
-            return hexCodes;
+            const objArr = tinycolor(primary).analogous();
+            return getHexCodes(objArr);
         },
     },
 };
