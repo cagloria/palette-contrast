@@ -36,7 +36,12 @@ const schemeSelect = {
     },
 };
 
-function AccentColorScheme({ primary, schemeName, onAccentSelect }) {
+function AccentColorScheme({
+    primary,
+    schemeName,
+    currentAccent,
+    onAccentSelect,
+}) {
     const [colorsInScheme, setColors] = useState(
         schemeSelect[schemeName].getScheme(primary)
     );
@@ -57,6 +62,7 @@ function AccentColorScheme({ primary, schemeName, onAccentSelect }) {
                     <AccentButton
                         color={color}
                         key={color}
+                        currentAccent={currentAccent}
                         onAccentSelect={handleAccentSelect}
                     />
                 ))}

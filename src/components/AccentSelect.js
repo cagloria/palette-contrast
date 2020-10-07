@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AccentColorScheme from "./AccentColorScheme";
 
 function AccentSelect({ primary, accent, onAccentChange }) {
-    const [selectedAccent, setValue] = useState(accent);
+    const [currentAccent, setValue] = useState(accent);
 
     function handleAccentFieldChange(event) {
         setValue(event.target.value);
@@ -22,6 +22,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
             <AccentColorScheme
                 schemeName="Analogous"
                 primary={primary}
+                currentAccent={currentAccent}
                 onAccentSelect={handleAccentButtonSelect}
             />
 
@@ -31,7 +32,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
                 type="text"
                 name="accent-input"
                 id="accent-input"
-                value={selectedAccent}
+                value={currentAccent}
                 onChange={handleAccentFieldChange}
             />
         </section>
