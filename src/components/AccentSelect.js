@@ -1,5 +1,12 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import AccentColorScheme from "./AccentColorScheme";
+
+const SchemesContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+`;
 
 function AccentSelect({ primary, accent, onAccentChange }) {
     const [currentAccent, setValue] = useState(accent);
@@ -19,12 +26,49 @@ function AccentSelect({ primary, accent, onAccentChange }) {
             <h2>Accent select</h2>
             <p>Choose an accent color:</p>
 
-            <AccentColorScheme
-                schemeName="Analogous"
-                primary={primary}
-                currentAccent={currentAccent}
-                onAccentSelect={handleAccentButtonSelect}
-            />
+            <SchemesContainer>
+                <AccentColorScheme
+                    schemeName="Analogous"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+
+                <AccentColorScheme
+                    schemeName="Monochromatic"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+
+                <AccentColorScheme
+                    schemeName="Split-complement"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+
+                <AccentColorScheme
+                    schemeName="Triad"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+
+                <AccentColorScheme
+                    schemeName="Tetrad"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+
+                <AccentColorScheme
+                    schemeName="Complement"
+                    primary={primary}
+                    currentAccent={currentAccent}
+                    onAccentSelect={handleAccentButtonSelect}
+                />
+            </SchemesContainer>
 
             <label htmlFor="accent-input">Or type in a custom color:</label>
             <input
