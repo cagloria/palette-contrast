@@ -73,6 +73,7 @@ function App() {
 
             <Contrast
                 primary={primary}
+                primaryText={primaryText}
                 accent={accent}
                 bodyText={bodyText}
                 background={background}
