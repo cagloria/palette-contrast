@@ -5,11 +5,16 @@ const Panel = styled.div`
     width: 200px;
     height: 100px;
     border-radius: 8px;
-    background-color: ${(props) => props.color};
+    background-color: ${(props) => props.bgColor};
+    color: ${(props) => props.textColor};
 `;
 
-function TextContrast({ bgColor }) {
-    return <Panel color={bgColor}>Lorem ipsum dolor sit amet.</Panel>;
+function TextContrast({ textColor, bgColor }) {
+    return (
+        <Panel bgColor={bgColor} textColor={textColor}>
+            Lorem ipsum dolor sit amet.
+        </Panel>
+    );
 }
 
 export default TextContrast;

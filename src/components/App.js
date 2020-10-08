@@ -41,7 +41,7 @@ function App() {
                 />
             </section>
 
-            <Contrast primary={primary} accent={accent} />
+            <Contrast primary={primary} accent={accent} bodyText={bodyText} />
         </div>
     );
 }
