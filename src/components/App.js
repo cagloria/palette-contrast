@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PrimarySelect from "./PrimarySelect";
-import AccentSelect from "./AccentSelect";
-import Contrast from "./Contrast";
+import AccentSelect from "./accent/AccentSelect";
+import Contrast from "./contrast/Contrast";
 
 function App() {
     const [primary, setPrimary] = useState("#10a381");
