@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ContrastTest from "./ContrastTest";
 
 const Panel1 = styled.div`
     border-radius: 8px 0 0 8px;
@@ -20,13 +21,24 @@ const GraphicContainer = styled.div`
     }
 `;
 
-function GraphicContrast({ color1, color2 }) {
+export default function GraphicContrast({ color1, color2 }) {
     return (
-        <GraphicContainer>
-            <Panel1 color={color1} />
-            <Panel2 color={color2} />
-        </GraphicContainer>
+        <div>
+            <h3>Primary and accent</h3>
+            <div>
+                {/* Graphics/UI component contrast ratio is defined only in 
+                    level AA as 3:1, the same as large text */}
+                <ContrastTest
+                    level="AA"
+                    color1={color1}
+                    color2={color2}
+                    size="large"
+                />
+                <GraphicContainer>
+                    <Panel1 color={color1} />
+                    <Panel2 color={color2} />
+                </GraphicContainer>
+            </div>
+        </div>
     );
 }
-
-export default GraphicContrast;

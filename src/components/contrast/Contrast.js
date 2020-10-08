@@ -50,10 +50,7 @@ export default function Contrast({
             </LevelButton>
 
             <ContrastPanels>
-                <div>
-                    <h3>Primary and accent</h3>
-                    <GraphicContrast color1={primary} color2={accent} />
-                </div>
+                <GraphicContrast color1={primary} color2={accent} />
 
                 <div>
                     <h3>Body text on background</h3>

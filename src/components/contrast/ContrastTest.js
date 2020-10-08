@@ -3,29 +3,22 @@ import tinycolor from "tinycolor2";
 
 export default function ContrastTest({ level, color1, color2, size }) {
     const [ratio, setRatio] = useState(0);
-    const [passes, setPasses] = useState(false);
+    const [passes, setPasses] = useState("false");
 
     useEffect(() => {
         setRatio(tinycolor.readability(color1, color2));
 
-        const levelVal = level;
-        let sizeVal = size;
-        if (sizeVal === "graphics") {
-            // Level AA has a required contrast ratio of 3:1 for both large text
-            // and graphic/UI components
-            sizeVal = "large";
-        }
         setPasses(
-            tinycolor.isReadable(color1, color2, {
-                level: levelVal,
-                size: sizeVal,
-            })
+            `${tinycolor.isReadable(color1, color2, {
+                level: level,
+                size: size,
+            })}`
         );
-    }, [color1, color2, level, size, ratio, passes]);
+    }, [level, color1, color2, size]);
 
     return (
-        <div>
+        <span>
             {passes} {ratio}
-        </div>
+        </span>
     );
 }
