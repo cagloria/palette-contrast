@@ -2,7 +2,7 @@ import React from "react";
 import GraphicContrast from "./GraphicContrast";
 import TextContrast from "./TextContrast";
 
-function Contrast({ primary, accent, bodyText }) {
+function Contrast({ primary, accent, bodyText, background }) {
     return (
         <section className="contrast">
             <h2>Contrast check</h2>
@@ -11,7 +11,7 @@ function Contrast({ primary, accent, bodyText }) {
             <GraphicContrast color1={primary} color2={accent} />
 
             <h3>Body text on background</h3>
-            <TextContrast textColor={bodyText} />
+            <TextContrast textColor={bodyText} bgColor={background} />
 
             <h3>Text on primary</h3>
             <TextContrast bgColor={primary} />
