@@ -7,9 +7,14 @@ function PrimarySelect({ primary, onPrimaryChange }) {
     }
 
     return (
-        <section className="primary-select">
+        <section>
             <h2>Primary select</h2>
-            <ColorInput color={primary} onColorChange={handlePrimaryChange} />
+            <ColorInput
+                color={primary}
+                fieldID="input-primary"
+                fieldLabel="Enter a primary color:"
+                onColorChange={handlePrimaryChange}
+            />
         </section>
     );
 }

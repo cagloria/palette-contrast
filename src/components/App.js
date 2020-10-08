@@ -5,6 +5,7 @@ import AccentSelect from "./accent/AccentSelect";
 import BodyText from "./body/BodyText";
 import Background from "./body/Background";
 import PrimaryText from "./primary/PrimaryText";
+import AccentText from "./accent/AccentText";
 import Contrast from "./contrast/Contrast";
 
 const AdditionalColors = styled.section`
@@ -20,6 +21,7 @@ function App() {
     const [bodyText, setBodyText] = useState("#1f1f1f");
     const [background, setBackground] = useState("#e3e3e3");
     const [primaryText, setPrimaryText] = useState("#1f1f1f");
+    const [accentText, setAccentText] = useState("#1f1f1f");
 
     function handlePrimaryChange(value) {
         setPrimary(value);
@@ -39,6 +41,10 @@ function App() {
 
     function handlePrimaryTextChange(value) {
         setPrimaryText(value);
+    }
+
+    function handleAccentTextChange(value) {
+        setAccentText(value);
     }
 
     return (
@@ -68,6 +74,10 @@ function App() {
                         primaryText={primaryText}
                         onPrimaryTextChange={handlePrimaryTextChange}
                     />
+                    <AccentText
+                        accentText={accentText}
+                        onAccentTextChange={handleAccentTextChange}
+                    />
                 </div>
             </AdditionalColors>
 
@@ -75,6 +85,7 @@ function App() {
                 primary={primary}
                 primaryText={primaryText}
                 accent={accent}
+                accentText={accentText}
                 bodyText={bodyText}
                 background={background}
             />

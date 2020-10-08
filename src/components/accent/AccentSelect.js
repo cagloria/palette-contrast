@@ -22,7 +22,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
     }
 
     return (
-        <section className="accent-select">
+        <section>
             <h2>Accent select</h2>
             <p>Choose an accent color:</p>
 
