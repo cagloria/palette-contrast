@@ -8,7 +8,7 @@ const Panel = styled.div`
     background-color: ${(props) => props.color};
 `;
 
-function ColorSelect({ color, onColorChange }) {
+function ColorInput({ color, onColorChange }) {
     const [value, setValue] = useState(color);
 
     function handleColorChange(event) {
@@ -30,4 +30,4 @@ function ColorSelect({ color, onColorChange }) {
     );
 }
 
-export default ColorSelect;
+export default ColorInput;

@@ -18,7 +18,7 @@ function App() {
     return (
         <div className="App">
             <PrimarySelect
-                color={primary}
+                primary={primary}
                 onPrimaryChange={handlePrimaryChange}
             />
             <AccentSelect

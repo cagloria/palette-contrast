@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AccentButton from "./AccentButton";
 import styled from "styled-components";
 import tinycolor from "tinycolor2";
+import AccentButton from "./AccentButton";
 
 const SchemeContainer = styled.div`
     display: grid;

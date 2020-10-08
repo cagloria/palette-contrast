@@ -1,7 +1,7 @@
 import React from "react";
-import ColorSelect from "./ColorSelect";
+import ColorInput from "./ColorInput";
 
-function PrimarySelect({ color, onPrimaryChange }) {
+function PrimarySelect({ primary, onPrimaryChange }) {
     function handlePrimaryChange(value) {
         onPrimaryChange(value);
     }
@@ -9,7 +9,7 @@ function PrimarySelect({ color, onPrimaryChange }) {
     return (
         <section className="primary-select">
             <h2>Primary select</h2>
-            <ColorSelect color={color} onColorChange={handlePrimaryChange} />
+            <ColorInput color={primary} onColorChange={handlePrimaryChange} />
         </section>
     );
 }
