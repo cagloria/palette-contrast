@@ -23,7 +23,7 @@ const LevelButton = styled.button`
     }
 `;
 
-function Contrast({
+export default function Contrast({
     primary,
     primaryText,
     accent,
@@ -73,5 +73,3 @@ function Contrast({
         </section>
     );
 }
-
-export default Contrast;
