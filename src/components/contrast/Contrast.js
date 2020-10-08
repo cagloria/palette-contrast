@@ -52,20 +52,26 @@ export default function Contrast({
             <ContrastPanels>
                 <GraphicContrast color1={primary} color2={accent} />
 
-                <div>
-                    <h3>Body text on background</h3>
-                    <TextContrast textColor={bodyText} bgColor={background} />
-                </div>
+                <TextContrast
+                    header="Body text on background"
+                    level={level}
+                    textColor={bodyText}
+                    bgColor={background}
+                />
 
-                <div>
-                    <h3>Text on primary</h3>
-                    <TextContrast textColor={primaryText} bgColor={primary} />
-                </div>
+                <TextContrast
+                    header="Text on primary"
+                    level={level}
+                    textColor={primaryText}
+                    bgColor={primary}
+                />
 
-                <div>
-                    <h3>Text on accent</h3>
-                    <TextContrast textColor={accentText} bgColor={accent} />
-                </div>
+                <TextContrast
+                    header="Text on accent"
+                    level={level}
+                    textColor={accentText}
+                    bgColor={accent}
+                />
             </ContrastPanels>
         </section>
     );
