@@ -8,8 +8,12 @@ function BodyText({ bodyText, onBodyTextChange }) {
 
     return (
         <div>
-            <p>Body text</p>
-            <ColorInput color={bodyText} onColorChange={handleBodyTextChange} />
+            <ColorInput
+                color={bodyText}
+                fieldID="input-body-text"
+                fieldLabel="Body text color"
+                onColorChange={handleBodyTextChange}
+            />
         </div>
     );
 }

@@ -8,9 +8,10 @@ function Background({ background, onBackgroundChange }) {
 
     return (
         <div>
-            <p>Background</p>
             <ColorInput
                 color={background}
+                fieldID="input-background"
+                fieldLabel="Background color"
                 onColorChange={handleBackgroundChange}
             />
         </div>

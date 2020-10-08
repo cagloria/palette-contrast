@@ -70,7 +70,9 @@ function AccentSelect({ primary, accent, onAccentChange }) {
                 />
             </SchemesContainer>
 
-            <label htmlFor="accent-input">Or type in a custom color:</label>
+            <label htmlFor="accent-input">
+                Or type in a custom accent color:
+            </label>
             <input
                 className="color-select__input"
                 type="text"

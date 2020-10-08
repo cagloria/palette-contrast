@@ -8,7 +8,7 @@ const Panel = styled.div`
     background-color: ${(props) => props.color};
 `;
 
-function ColorInput({ color, onColorChange }) {
+function ColorInput({ color, fieldID, fieldLabel, onColorChange }) {
     const [value, setValue] = useState(color);
 
     function handleColorChange(event) {
@@ -19,10 +19,12 @@ function ColorInput({ color, onColorChange }) {
     return (
         <>
             <Panel color={color} />
+            <label htmlFor={fieldID}>{fieldLabel}</label>
             <input
                 className="color-select__input"
                 type="text"
                 name="color-input"
+                id={fieldID}
                 value={value}
                 onChange={handleColorChange}
             />
