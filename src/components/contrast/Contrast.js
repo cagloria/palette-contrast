@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import GraphicContrast from "./GraphicContrast";
 import TextContrast from "./TextContrast";
 
-const ContrastSection = styled.section`
+const ContrastPanels = styled.div`
+    display: flex;
+    flex-wrap: wrap;
     > div {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+    }
+`;
+
+const LevelButton = styled.button`
+    span:first-child {
+        margin-right: 20px;
+    }
+
+    .active {
+        text-decoration: underline;
+        font-weight: bold;
     }
 `;
 
@@ -18,11 +31,25 @@ function Contrast({
     bodyText,
     background,
 }) {
+    const [level, setLevel] = useState("AA");
+
+    function changeLevel() {
+        setLevel(level === "AA" ? "AAA" : "AA");
+    }
+
     return (
-        <ContrastSection>
+        <section>
             <h2>Contrast check</h2>
 
-            <div>
+            <LevelButton
+                aria-label={`Switch level to ${level === "AA" ? "AAA" : "AA"}`}
+                onClick={changeLevel}
+            >
+                <span className={level === "AA" ? "active" : ""}>AA</span>
+                <span className={level === "AAA" ? "active" : ""}>AAA</span>
+            </LevelButton>
+
+            <ContrastPanels>
                 <div>
                     <h3>Primary and accent</h3>
                     <GraphicContrast color1={primary} color2={accent} />
@@ -42,8 +69,8 @@ function Contrast({
                     <h3>Text on accent</h3>
                     <TextContrast textColor={accentText} bgColor={accent} />
                 </div>
-            </div>
-        </ContrastSection>
+            </ContrastPanels>
+        </section>
     );
 }
 
