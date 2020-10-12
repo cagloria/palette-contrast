@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Export({
     primary,
@@ -9,6 +9,17 @@ export default function Export({
     accentText,
 }) {
     const [value, setValue] = useState("");
+
+    useEffect(() => {
+        setValue(
+            `--primary: ${primary};\n` +
+                `--accent: ${accent};\n` +
+                `--body-text: ${bodyText};\n` +
+                `--background: ${background};\n` +
+                `--primary-text: ${primaryText};\n` +
+                `--accent-text: ${accentText};\n`
+        );
+    }, [primary, accent, bodyText, background, primaryText, accentText]);
 
     function handleChange(event) {
         setValue(event.target.value);
