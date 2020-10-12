@@ -7,6 +7,7 @@ import Background from "./body/Background";
 import PrimaryText from "./primary/PrimaryText";
 import AccentText from "./accent/AccentText";
 import Contrast from "./contrast/Contrast";
+import Export from "./export/Export";
 
 const AdditionalColors = styled.section`
     > div {
@@ -88,6 +89,15 @@ function App() {
                 accentText={accentText}
                 bodyText={bodyText}
                 background={background}
+            />
+
+            <Export
+                primary={primary}
+                accent={accent}
+                bodyText={bodyText}
+                background={background}
+                primaryText={primaryText}
+                accentText={accentText}
             />
         </main>
     );
