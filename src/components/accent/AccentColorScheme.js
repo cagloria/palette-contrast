@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import tinycolor from "tinycolor2";
 import AccentButton from "./AccentButton";
-
-const SchemeContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    gap: 5px;
-`;
 
 /**
  * Converts an array of tinycolor objects to hex codes.
@@ -87,9 +80,9 @@ function AccentColorScheme({
     }
 
     return (
-        <div>
+        <>
             <h3 className="accent-color-scheme__header">{schemeName}</h3>
-            <SchemeContainer>
+            <div className="accent-color-scheme__colors-container">
                 {colorsArr.map((color) => (
                     <AccentButton
                         color={color}
@@ -98,8 +91,8 @@ function AccentColorScheme({
                         onAccentSelect={handleAccentSelect}
                     />
                 ))}
-            </SchemeContainer>
-        </div>
+            </div>
+        </>
     );
 }
 

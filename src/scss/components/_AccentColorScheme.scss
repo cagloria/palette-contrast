@@ -1,6 +1,13 @@
 .accent-color-scheme {
     &__header {
         font-size: 1.25em;
-        line-height: 23px;
+        text-align: center;
+    }
+
+    &__colors-container {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        gap: 5px;
     }
 }

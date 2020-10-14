@@ -55,13 +55,12 @@ function AccentSelect({ primary, accent, onAccentChange }) {
     }
 
     return (
-        <section className="component-panel">
+        <section className="component-panel accent-select-section">
             <h2>Accent select</h2>
-            <p>Choose an accent color:</p>
 
             <button
                 onClick={previousScheme}
-                className="accent-select__index-button accent-select__index-button--previous"
+                className="icon-button icon-button--previous"
                 aria-label="See previous color scheme"
             ></button>
 
@@ -74,19 +73,21 @@ function AccentSelect({ primary, accent, onAccentChange }) {
 
             <button
                 onClick={nextScheme}
-                className="accent-select__index-button accent-select__index-button--next"
+                className="icon-button icon-button--next"
                 aria-label="See next color scheme"
             ></button>
 
-            <label htmlFor="input-accent">
-                Or type in a custom accent color:
-            </label>
-            <input
-                type="text"
-                id="input-accent"
-                value={currentAccent}
-                onChange={handleAccentFieldChange}
-            />
+            <div className="accent-select-section__input">
+                <label htmlFor="input-accent">
+                    Or type in a custom accent color:
+                </label>
+                <input
+                    type="text"
+                    id="input-accent"
+                    value={currentAccent}
+                    onChange={handleAccentFieldChange}
+                />
+            </div>
         </section>
     );
 }
