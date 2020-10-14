@@ -24,6 +24,26 @@ function AccentSelect({ primary, accent, onAccentChange }) {
         }
     }, [schemeIndex, schemes]);
 
+    function incrementScheme() {
+        const nextIndex = schemeIndex + 1;
+
+        if (schemeIndex >= schemes.length) {
+            setSchemeIndex(0);
+        } else {
+            setSchemeIndex(nextIndex);
+        }
+    }
+
+    function decrementScheme() {
+        const nextIndex = schemeIndex - 1;
+
+        if (nextIndex < 0) {
+            setSchemeIndex(schemes.length - 1);
+        } else {
+            setSchemeIndex(nextIndex);
+        }
+    }
+
     function handleAccentFieldChange(event) {
         setValue(event.target.value);
         onAccentChange(event.target.value);
@@ -39,12 +59,26 @@ function AccentSelect({ primary, accent, onAccentChange }) {
             <h2>Accent select</h2>
             <p>Choose an accent color:</p>
 
+            <button
+                onClick={decrementScheme}
+                aria-label="See previous color scheme"
+            >
+                {"<"}
+            </button>
+
             <AccentColorScheme
                 schemeName={displayedScheme}
                 primary={primary}
                 currentAccent={currentAccent}
                 onAccentSelect={handleAccentButtonSelect}
             />
+
+            <button
+                onClick={incrementScheme}
+                aria-label="See next color scheme"
+            >
+                {">"}
+            </button>
 
             <label>
                 Or type in a custom accent color:
