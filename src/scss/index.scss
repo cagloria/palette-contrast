@@ -1,10 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
+
 // Variables
 $color-text: #f7f7f7;
+$color-field-text: #cccccc;
 $color-main-background: #1a1a1a;
+$font-header: "Lato", sans-serif;
+$font-body: "Poppins", sans-serif;
 
 // Base
 @import "./base/general";
-@import "./base/typography";
 @import "./base/classes";
 
 // Components
