@@ -88,7 +88,7 @@ function AccentColorScheme({
 
     return (
         <div>
-            <h3>{schemeName}</h3>
+            <h3 className="accent-color-scheme__header">{schemeName}</h3>
             <SchemeContainer>
                 {colorsArr.map((color) => (
                     <AccentButton

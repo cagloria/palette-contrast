@@ -24,7 +24,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
         }
     }, [schemeIndex, schemes]);
 
-    function incrementScheme() {
+    function nextScheme() {
         const nextIndex = schemeIndex + 1;
 
         if (schemeIndex >= schemes.length) {
@@ -34,7 +34,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
         }
     }
 
-    function decrementScheme() {
+    function previousScheme() {
         const nextIndex = schemeIndex - 1;
 
         if (nextIndex < 0) {
@@ -60,7 +60,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
             <p>Choose an accent color:</p>
 
             <button
-                onClick={decrementScheme}
+                onClick={previousScheme}
                 aria-label="See previous color scheme"
             >
                 {"<"}
@@ -74,7 +74,7 @@ function AccentSelect({ primary, accent, onAccentChange }) {
             />
 
             <button
-                onClick={incrementScheme}
+                onClick={nextScheme}
                 aria-label="See next color scheme"
             >
                 {">"}
