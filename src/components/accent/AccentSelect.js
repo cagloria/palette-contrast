@@ -64,18 +64,18 @@ function AccentSelect({ primary, accent, onAccentChange }) {
                 aria-label="See previous color scheme"
             ></button>
 
+            <button
+                onClick={nextScheme}
+                className="icon-button icon-button--next"
+                aria-label="See next color scheme"
+            ></button>
+
             <AccentColorScheme
                 schemeName={displayedScheme}
                 primary={primary}
                 currentAccent={currentAccent}
                 onAccentSelect={handleAccentButtonSelect}
             />
-
-            <button
-                onClick={nextScheme}
-                className="icon-button icon-button--next"
-                aria-label="See next color scheme"
-            ></button>
 
             <div className="accent-select-section__input">
                 <label htmlFor="input-accent">

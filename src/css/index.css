@@ -114,6 +114,9 @@ input[type="text"] {
 .accent-select-section {
   display: -ms-grid;
   display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (auto)[4];
@@ -138,6 +141,8 @@ input[type="text"] {
 }
 
 .accent-select-section .icon-button--previous {
+  -ms-grid-column-align: end;
+      justify-self: end;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -146,6 +151,8 @@ input[type="text"] {
 }
 
 .accent-select-section .icon-button--next {
+  -ms-grid-column-align: start;
+      justify-self: start;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 3;
@@ -162,7 +169,6 @@ input[type="text"] {
 }
 
 .accent-color-scheme__colors-container {
-  width: 100%;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -176,10 +182,16 @@ input[type="text"] {
 }
 
 .accent-color-scheme__colors-container {
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(50px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accent-color-scheme__colors-container > * {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.accent-color-scheme__colors-container > *:last-child {
+  margin-right: 0;
 }
