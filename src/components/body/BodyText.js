@@ -10,6 +10,7 @@ function BodyText({ bodyText, onBodyTextChange }) {
         <div>
             <ColorInput
                 color={bodyText}
+                fieldID="input-body-text"
                 fieldLabel="Body text color"
                 onColorChange={handleBodyTextChange}
             />

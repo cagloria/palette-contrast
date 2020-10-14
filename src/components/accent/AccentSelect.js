@@ -78,14 +78,15 @@ function AccentSelect({ primary, accent, onAccentChange }) {
                 aria-label="See next color scheme"
             ></button>
 
-            <label>
+            <label htmlFor="input-accent">
                 Or type in a custom accent color:
-                <input
-                    type="text"
-                    value={currentAccent}
-                    onChange={handleAccentFieldChange}
-                />
             </label>
+            <input
+                type="text"
+                id="input-accent"
+                value={currentAccent}
+                onChange={handleAccentFieldChange}
+            />
         </section>
     );
 }

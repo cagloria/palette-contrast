@@ -7,7 +7,7 @@ function PrimarySelect({ primary, onPrimaryChange }) {
     }
 
     return (
-        <section className="component-panel">
+        <section className="component-panel primary-select-section">
             <h2>Primary select</h2>
             <ColorInput
                 color={primary}

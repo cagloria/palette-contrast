@@ -1,0 +1,18 @@
+.primary-select-section {
+    .color-input {
+        flex-direction: column;
+        > *:first-child {
+            margin-bottom: 28px;
+        }
+
+        label {
+            position: absolute;
+            top: -200vh;
+        }
+
+        &__preview-box {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}

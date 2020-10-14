@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const Panel = styled.div`
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
+const PreviewBox = styled.div`
     background-color: ${(props) => props.color};
 `;
 
-function ColorInput({ color, fieldLabel, onColorChange }) {
+function ColorInput({ color, fieldID, fieldLabel, onColorChange }) {
     const [value, setValue] = useState(color);
 
     function handleColorChange(event) {
@@ -17,18 +14,17 @@ function ColorInput({ color, fieldLabel, onColorChange }) {
     }
 
     return (
-        <>
-            <Panel color={color} />
-            <label>
-                {fieldLabel}
-                <input
-                    className="color-select__input"
-                    type="text"
-                    value={value}
-                    onChange={handleColorChange}
-                />
-            </label>
-        </>
+        <div className="color-input">
+            <PreviewBox color={color} className="color-input__preview-box" />
+            <label htmlFor={fieldID}>{fieldLabel}</label>
+            <input
+                className="color-select__input"
+                type="text"
+                id={fieldID}
+                value={value}
+                onChange={handleColorChange}
+            />
+        </div>
     );
 }
 

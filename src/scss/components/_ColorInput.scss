@@ -1,0 +1,10 @@
+.color-input {
+    display: flex;
+
+    &__preview-box {
+        width: 82px;
+        height: 82px;
+        border-radius: 14px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    }
+}

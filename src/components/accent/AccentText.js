@@ -10,6 +10,7 @@ function AccentText({ accentText, onAccentTextChange }) {
         <div>
             <ColorInput
                 color={accentText}
+                fieldID="input-accent-text"
                 fieldLabel="Text on an accent background"
                 onColorChange={handleAccentTextChange}
             />

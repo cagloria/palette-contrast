@@ -6,7 +6,6 @@ body {
   background-color: #1a1a1a;
 }
 
-h1,
 h2,
 h3 {
   font-family: "Poppins", sans-serif;
@@ -14,25 +13,21 @@ h3 {
   font-style: normal;
 }
 
-h1 {
-  font-size: 2.125em;
-}
-
 h2 {
   font-size: 2.125em;
-  line-height: 51px;
+  line-height: 1.5em;
   text-align: center;
 }
 
 h3 {
   font-size: 1.75em;
-  line-height: 42px;
+  line-height: 1.5em;
   letter-spacing: -0.02em;
 }
 
 p {
   font-size: 1.125em;
-  line-height: 27px;
+  line-height: 1.5em;
 }
 
 button {
@@ -41,12 +36,12 @@ button {
 
 label {
   font-size: 1.25em;
-  line-height: 23px;
+  line-height: 1.5em;
 }
 
 input[type="text"] {
   font-family: "Poppins", sans-serif;
-  font-size: 0.9em;
+  font-size: 1.125em;
   line-height: 1.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -63,6 +58,41 @@ input[type="text"] {
   -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.35);
           box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.35);
   border-radius: 8px;
+}
+
+.primary-select-section .color-input {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.primary-select-section .color-input > *:first-child {
+  margin-bottom: 28px;
+}
+
+.primary-select-section .color-input label {
+  position: absolute;
+  top: -200vh;
+}
+
+.primary-select-section .color-input__preview-box {
+  width: 100px;
+  height: 100px;
+}
+
+.color-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.color-input__preview-box {
+  width: 82px;
+  height: 82px;
+  border-radius: 14px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .accent-select__index-button {

@@ -10,6 +10,7 @@ function PrimaryText({ primaryText, onPrimaryTextChange }) {
         <div>
             <ColorInput
                 color={primaryText}
+                fieldID="input-primary-text"
                 fieldLabel="Text on a primary background"
                 onColorChange={handlePrimaryTextChange}
             />

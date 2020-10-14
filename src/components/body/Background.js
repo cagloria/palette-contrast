@@ -10,6 +10,7 @@ function Background({ background, onBackgroundChange }) {
         <div>
             <ColorInput
                 color={background}
+                fieldID="input-background"
                 fieldLabel="Background color"
                 onColorChange={handleBackgroundChange}
             />
