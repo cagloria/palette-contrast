@@ -1,2 +1,12 @@
-@import "./base/global";
-@import "./components/global";
+// Variables
+$color-text: #f7f7f7;
+$color-main-background: #1a1a1a;
+
+// Base
+@import "./base/general";
+@import "./base/typography";
+@import "./base/classes";
+
+// Components
+@import "./components/AccentSelect";
+@import "./components/AccentColorScheme";

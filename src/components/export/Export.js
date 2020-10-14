@@ -59,7 +59,7 @@ export default function Export({
     }
 
     return (
-        <section>
+        <section className="component-panel">
             <h2>Export</h2>
 
             <fieldset onChange={handleRadioChange}>

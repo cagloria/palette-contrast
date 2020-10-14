@@ -1,0 +1,15 @@
+.accent-select {
+    &__index-button {
+        width: 24px;
+        height: 24px;
+        color: $color-text;
+        border: 0;
+        background-color: transparent;
+        &--previous {
+            background-image: url("../assets/mi-round-arrow_back-24px.svg");
+        }
+        &--next {
+            background-image: url("../assets/mi-round-arrow_forward-24px.svg");
+        }
+    }
+}

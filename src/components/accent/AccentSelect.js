@@ -55,16 +55,15 @@ function AccentSelect({ primary, accent, onAccentChange }) {
     }
 
     return (
-        <section>
+        <section className="component-panel">
             <h2>Accent select</h2>
             <p>Choose an accent color:</p>
 
             <button
                 onClick={previousScheme}
+                className="accent-select__index-button accent-select__index-button--previous"
                 aria-label="See previous color scheme"
-            >
-                {"<"}
-            </button>
+            ></button>
 
             <AccentColorScheme
                 schemeName={displayedScheme}
@@ -75,10 +74,9 @@ function AccentSelect({ primary, accent, onAccentChange }) {
 
             <button
                 onClick={nextScheme}
+                className="accent-select__index-button accent-select__index-button--next"
                 aria-label="See next color scheme"
-            >
-                {">"}
-            </button>
+            ></button>
 
             <label>
                 Or type in a custom accent color:

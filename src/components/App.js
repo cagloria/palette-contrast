@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import PrimarySelect from "./primary/PrimarySelect";
 import AccentSelect from "./accent/AccentSelect";
 import BodyText from "./body/BodyText";
@@ -8,13 +7,6 @@ import PrimaryText from "./primary/PrimaryText";
 import AccentText from "./accent/AccentText";
 import Contrast from "./contrast/Contrast";
 import Export from "./export/Export";
-
-const AdditionalColors = styled.section`
-    > div {
-        display: flex;
-        flex-wrap: wrap;
-    }
-`;
 
 function App() {
     const [primary, setPrimary] = useState("#10a381");
@@ -60,7 +52,7 @@ function App() {
                 onAccentChange={handleAccentChange}
             />
 
-            <AdditionalColors>
+            <section className="component-panel">
                 <h2>Additional colors</h2>
                 <div>
                     <BodyText
@@ -80,16 +72,7 @@ function App() {
                         onAccentTextChange={handleAccentTextChange}
                     />
                 </div>
-            </AdditionalColors>
-
-            <Contrast
-                primary={primary}
-                primaryText={primaryText}
-                accent={accent}
-                accentText={accentText}
-                bodyText={bodyText}
-                background={background}
-            />
+            </section>
 
             <Export
                 primary={primary}
@@ -98,6 +81,15 @@ function App() {
                 background={background}
                 primaryText={primaryText}
                 accentText={accentText}
+            />
+
+            <Contrast
+                primary={primary}
+                primaryText={primaryText}
+                accent={accent}
+                accentText={accentText}
+                bodyText={bodyText}
+                background={background}
             />
         </main>
     );
