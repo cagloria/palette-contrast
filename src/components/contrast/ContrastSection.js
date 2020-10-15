@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GraphicContrast from "./GraphicContrast";
 import TextContrast from "./TextContrast";
 
-export default function Contrast({
+export default function ContrastSection({
     primary,
     primaryText,
     accent,

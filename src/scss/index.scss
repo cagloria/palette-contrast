@@ -25,10 +25,10 @@ $input-background: #0d0d0d;
 
 // Components
 @import "./components/App";
-@import "./components/PrimarySelect";
+@import "./components/PrimarySection";
 @import "./components/ColorInput";
-@import "./components/AccentSelect";
+@import "./components/AccentSection";
 @import "./components/AccentColorScheme";
-@import "./components/Export";
-@import "./components/Contrast";
-@import "./components/GraphicContrast"
+@import "./components/ExportSection";
+@import "./components/ContrastSection";
+@import "./components/GraphicContrast";

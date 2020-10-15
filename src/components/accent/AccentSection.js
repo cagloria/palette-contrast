@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AccentColorScheme from "./AccentColorScheme";
 
-function AccentSelect({ primary, accent, onAccentChange }) {
+function AccentSection({ primary, accent, onAccentChange }) {
     const [currentAccent, setValue] = useState(accent);
     const [schemeIndex, setSchemeIndex] = useState(0);
     const [displayedScheme, setDisplayedScheme] = useState("Analogous");
@@ -92,4 +92,4 @@ function AccentSelect({ primary, accent, onAccentChange }) {
     );
 }
 
-export default AccentSelect;
+export default AccentSection;

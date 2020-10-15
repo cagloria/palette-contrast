@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import PrimarySelect from "./primary/PrimarySelect";
-import AccentSelect from "./accent/AccentSelect";
-import BodyText from "./body/BodyText";
-import Background from "./body/Background";
-import PrimaryText from "./primary/PrimaryText";
-import AccentText from "./accent/AccentText";
-import Contrast from "./contrast/Contrast";
-import Export from "./export/Export";
+import PrimarySection from "./primary/PrimarySection";
+import AccentSection from "./accent/AccentSection";
+import BodyText from "./additional/BodyText";
+import Background from "./additional/Background";
+import PrimaryText from "./additional/PrimaryText";
+import AccentText from "./additional/AccentText";
+import ContrastSection from "./contrast/ContrastSection";
+import ExportSection from "./export/ExportSection";
 
 function App() {
     const [primary, setPrimary] = useState("#10a381");
@@ -42,11 +42,11 @@ function App() {
 
     return (
         <main className="App">
-            <PrimarySelect
+            <PrimarySection
                 primary={primary}
                 onPrimaryChange={handlePrimaryChange}
             />
-            <AccentSelect
+            <AccentSection
                 primary={primary}
                 accent={accent}
                 onAccentChange={handleAccentChange}
@@ -74,7 +74,7 @@ function App() {
                 </div>
             </section>
 
-            <Export
+            <ExportSection
                 primary={primary}
                 accent={accent}
                 bodyText={bodyText}
@@ -83,7 +83,7 @@ function App() {
                 accentText={accentText}
             />
 
-            <Contrast
+            <ContrastSection
                 primary={primary}
                 primaryText={primaryText}
                 accent={accent}

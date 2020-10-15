@@ -1,7 +1,7 @@
 import React from "react";
 import ColorInput from "../ColorInput";
 
-function PrimarySelect({ primary, onPrimaryChange }) {
+function PrimarySection({ primary, onPrimaryChange }) {
     function handlePrimaryChange(value) {
         onPrimaryChange(value);
     }
@@ -19,4 +19,4 @@ function PrimarySelect({ primary, onPrimaryChange }) {
     );
 }
 
-export default PrimarySelect;
+export default PrimarySection;

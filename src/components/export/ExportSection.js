@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Export({
+export default function ExportSection({
     primary,
     accent,
     bodyText,
