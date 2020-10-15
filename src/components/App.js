@@ -52,7 +52,7 @@ function App() {
                 onAccentChange={handleAccentChange}
             />
 
-            <section className="component-panel">
+            <section className="component-panel additional-colors-section">
                 <h2>Additional colors</h2>
                 <div>
                     <BodyText

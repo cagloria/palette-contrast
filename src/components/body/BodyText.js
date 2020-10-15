@@ -7,7 +7,7 @@ function BodyText({ bodyText, onBodyTextChange }) {
     }
 
     return (
-        <div>
+        <div className="body-text-select">
             <ColorInput
                 color={bodyText}
                 fieldID="input-body-text"

@@ -7,7 +7,7 @@ function AccentText({ accentText, onAccentTextChange }) {
     }
 
     return (
-        <div>
+        <div className="accent-text-select">
             <ColorInput
                 color={accentText}
                 fieldID="input-accent-text"

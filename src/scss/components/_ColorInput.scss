@@ -1,10 +1,25 @@
 .color-input {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    grid-template-rows: 1fr 1fr;
     &__preview-box {
         width: 82px;
         height: 82px;
         border-radius: 14px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+        grid-row: 1 / -1;
+        grid-column: 1;
+    }
+
+    label {
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    input {
+        align-self: end;
+        grid-row: 2;
+        grid-column: 2;
     }
 }

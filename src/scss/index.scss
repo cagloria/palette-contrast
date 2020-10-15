@@ -12,6 +12,7 @@ $font-body: "Poppins", sans-serif;
 @import "./base/classes";
 
 // Components
+@import "./components/App";
 @import "./components/PrimarySelect";
 @import "./components/ColorInput";
 @import "./components/AccentSelect";

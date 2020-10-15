@@ -7,7 +7,7 @@ function PrimaryText({ primaryText, onPrimaryTextChange }) {
     }
 
     return (
-        <div>
+        <div className="primary-text-select">
             <ColorInput
                 color={primaryText}
                 fieldID="input-primary-text"

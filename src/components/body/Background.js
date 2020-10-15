@@ -7,7 +7,7 @@ function Background({ background, onBackgroundChange }) {
     }
 
     return (
-        <div>
+        <div className="background-select">
             <ColorInput
                 color={background}
                 fieldID="input-background"

@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     .color-input {
+        display: flex;
         flex-direction: column;
         > *:first-child {
             margin-bottom: 28px;
