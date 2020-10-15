@@ -5,6 +5,8 @@ body {
     background-color: $color-main-background;
 }
 
+// *********************************************************
+// Text
 h2,
 h3 {
     font-family: $font-body;
@@ -29,12 +31,22 @@ p {
     line-height: 1.5em;
 }
 
+// *********************************************************
+// Forms
 button {
     cursor: pointer;
 }
 
+fieldset {
+    border: 0;
+}
+
+legend {
+    font-size: 1.125em;
+}
+
 label {
-    font-size: 1.25em;
+    font-size: 1.125em;
     line-height: 1.5em;
 }
 
@@ -47,6 +59,18 @@ input[type="text"] {
     height: 27px;
     text-align: center;
     color: $color-field-text;
-    border: 0.5px solid #5a5a5a;
-    background: #0d0d0d;
+    border: 0.5px solid $color-field-border;
+    background: $color-field-background;
+}
+
+textarea {
+    width: clamp(320px, 90%, 400px);
+    height: 200px;
+    padding: 8px;
+    font-size: 1.2em;
+    background-color: $color-field-background;
+    color: $color-field-text;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.65);
 }

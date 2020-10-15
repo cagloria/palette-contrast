@@ -59,10 +59,10 @@ export default function Export({
     }
 
     return (
-        <section className="component-panel">
+        <section className="component-panel export-section">
             <h2>Export</h2>
 
-            <fieldset onChange={handleRadioChange}>
+            <fieldset onChange={handleRadioChange} className="export-format-fieldset">
                 <legend>Select a format:</legend>
                 <label>
                     <input
@@ -86,8 +86,6 @@ export default function Export({
             <textarea
                 value={textareaValue}
                 onChange={handleTextareaChange}
-                rows="6"
-                cols="30"
             />
         </section>
     );

@@ -4,6 +4,8 @@
 $color-text: #f7f7f7;
 $color-field-text: #cccccc;
 $color-main-background: #1a1a1a;
+$color-field-border: #5a5a5a;
+$color-field-background: #0d0d0d;
 $font-header: "Lato", sans-serif;
 $font-body: "Poppins", sans-serif;
 
@@ -17,3 +19,4 @@ $font-body: "Poppins", sans-serif;
 @import "./components/ColorInput";
 @import "./components/AccentSelect";
 @import "./components/AccentColorScheme";
+@import "./components/Export";
