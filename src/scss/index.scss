@@ -3,6 +3,7 @@
 // Variables
 $color-text: #f7f7f7;
 $color-link: #c1c1c1;
+$color-button-background: #262626;
 $color-field-text: #cccccc;
 $color-main-background: #1a1a1a;
 $color-field-border: #5a5a5a;
@@ -21,3 +22,4 @@ $font-body: "Poppins", sans-serif;
 @import "./components/AccentSelect";
 @import "./components/AccentColorScheme";
 @import "./components/Export";
+@import "./components/Contrast";

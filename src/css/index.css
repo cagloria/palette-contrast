@@ -35,7 +35,13 @@ a {
 }
 
 button {
+  font-size: 1.125em;
+  padding: 10px 20px;
   cursor: pointer;
+  color: #f7f7f7;
+  border: 0;
+  border-radius: 8px;
+  background-color: #262626;
 }
 
 fieldset {
@@ -292,4 +298,13 @@ textarea {
 
 .export-format-fieldset label input[type="radio"] {
   margin-right: 8px;
+}
+
+.level-button span:first-child {
+  margin-right: 20px;
+}
+
+.level-button .active {
+  font-weight: bold;
+  border-bottom: 1px solid #f7f7f7;
 }

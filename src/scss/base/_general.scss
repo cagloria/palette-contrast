@@ -38,7 +38,13 @@ a {
 }
 
 button {
+    font-size: 1.125em;
+    padding: 10px 20px;
     cursor: pointer;
+    color: $color-text;
+    border: 0;
+    border-radius: 8px;
+    background-color: $color-button-background;
 }
 
 fieldset {
