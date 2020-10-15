@@ -342,3 +342,23 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.graphic-panel-container {
+  height: 100px;
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.graphic-panel-container > div {
+  width: 50%;
+}
+
+.graphic-panel-1 {
+  border-radius: 8px 0 0 8px;
+}
+
+.graphic-panel-2 {
+  border-radius: 0 8px 8px 0;
+}
