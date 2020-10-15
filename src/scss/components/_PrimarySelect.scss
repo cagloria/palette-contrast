@@ -1,4 +1,7 @@
 .primary-select-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     .color-input {
         flex-direction: column;
         > *:first-child {
