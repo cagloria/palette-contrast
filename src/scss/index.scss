@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap");
 
 // Variables
-$color-text: #f7f7f7;
-$color-link: #c1c1c1;
-$color-button-background: #262626;
-$color-field-text: #cccccc;
-$color-main-background: #1a1a1a;
-$color-field-border: #5a5a5a;
-$color-field-background: #0d0d0d;
-$font-header: "Lato", sans-serif;
-$font-body: "Poppins", sans-serif;
+$header-font: "Lato", sans-serif;
+$body-font: "Poppins", sans-serif;
+
+$body-background: #1a1a1a;
+$panel-background: #262626;
+
+$text-color: #f7f7f7;
+
+$link-color: #c1c1c1;
+
+$button-background: #262626;
+$dark-button-background: #757575;
+$dark-button-text-color: #ffffff;
+
+$input-text-color: #cccccc;
+$input-border-color: #5a5a5a;
+$input-background: #0d0d0d;
 
 // Base
 @import "./base/general";

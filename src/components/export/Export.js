@@ -58,11 +58,21 @@ export default function Export({
         setRadioValue(event.target.value);
     }
 
+    function copyColors() {
+        const colorsTextarea = document.getElementById("export-textarea");
+        colorsTextarea.select();
+        document.execCommand("copy");
+        colorsTextarea.blur();
+    }
+
     return (
         <section className="component-panel export-section">
             <h2>Export</h2>
 
-            <fieldset onChange={handleRadioChange} className="export-format-fieldset">
+            <fieldset
+                onChange={handleRadioChange}
+                className="export-format-fieldset"
+            >
                 <legend>Select a format:</legend>
                 <label>
                     <input
@@ -84,9 +94,14 @@ export default function Export({
             </fieldset>
 
             <textarea
+                id="export-textarea"
                 value={textareaValue}
                 onChange={handleTextareaChange}
             />
+
+            <button onClick={copyColors} className="dark-button">
+                Copy to clipboard
+            </button>
         </section>
     );
 }

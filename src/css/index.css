@@ -41,6 +41,8 @@ button {
   color: #f7f7f7;
   border: 0;
   border-radius: 8px;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
   background-color: #262626;
 }
 
@@ -85,10 +87,10 @@ textarea {
 }
 
 .component-panel {
-  background: #262626;
-  -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.35);
-          box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.35);
   border-radius: 8px;
+  background: #262626;
+  -webkit-box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.35);
+          box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.35);
 }
 
 .icon-button {
@@ -97,6 +99,8 @@ textarea {
   color: #f7f7f7;
   border: 0;
   background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .icon-button--previous {
@@ -105,6 +109,11 @@ textarea {
 
 .icon-button--next {
   background-image: url("../assets/mi-round-arrow_forward-24px.svg");
+}
+
+.dark-button {
+  color: #ffffff;
+  background-color: #757575;
 }
 
 .additional-colors-section {
@@ -222,6 +231,13 @@ textarea {
   grid-area: 4 / 1 / 5 / 4;
 }
 
+.accent-select-section .icon-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: transparent;
+}
+
 .accent-select-section .icon-button--previous {
   -ms-grid-column-align: end;
       justify-self: end;
@@ -307,4 +323,22 @@ textarea {
 .level-button .active {
   font-weight: bold;
   border-bottom: 1px solid #f7f7f7;
+}
+
+.contrast-panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contrast-panels > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
