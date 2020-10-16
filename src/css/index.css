@@ -11,22 +11,23 @@ h3 {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
-}
-
-h2 {
-  font-size: 2.125em;
-  line-height: 1.5em;
   text-align: center;
 }
 
+h2 {
+  font-size: clamp(1.5em, 9vw, 2.125em);
+}
+
 h3 {
-  font-size: 1.75em;
-  line-height: 1.5em;
+  font-size: clamp(1.25em, 6vw, 1.4em);
   letter-spacing: -0.02em;
 }
 
-p {
-  font-size: 1.125em;
+p,
+legend,
+label,
+input[type="text"] {
+  font-size: clamp(1em, 4vw, 1.2em);
   line-height: 1.5em;
 }
 
@@ -41,27 +42,17 @@ button {
   color: #f7f7f7;
   border: 0;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
   background-color: #262626;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 fieldset {
   border: 0;
 }
 
-legend {
-  font-size: 1.125em;
-}
-
-label {
-  font-size: 1.125em;
-  line-height: 1.5em;
-}
-
 input[type="text"] {
   font-family: "Poppins", sans-serif;
-  font-size: 1.125em;
   line-height: 1.5em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -316,6 +307,45 @@ textarea {
   margin-right: 8px;
 }
 
+.contrast-section {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+      grid-template-areas: "h" "i" "b" "p";
+}
+
+.contrast-section h2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: h;
+}
+
+.contrast-information {
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: i;
+}
+
+@media only screen and (min-width: 426px) {
+  .contrast-information {
+    width: 50%;
+    width: clamp(45ch, 80%, 70ch);
+  }
+}
+
+.level-button {
+  margin: 0 auto;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: b;
+}
+
 .level-button span:first-child {
   margin-right: 20px;
 }
@@ -326,11 +356,14 @@ textarea {
 }
 
 .contrast-panels {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: p;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-auto-rows: row;
 }
 
 .contrast-panels > div {

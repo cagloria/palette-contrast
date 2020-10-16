@@ -74,15 +74,6 @@ function App() {
                 </div>
             </section>
 
-            <ExportSection
-                primary={primary}
-                accent={accent}
-                bodyText={bodyText}
-                background={background}
-                primaryText={primaryText}
-                accentText={accentText}
-            />
-
             <ContrastSection
                 primary={primary}
                 primaryText={primaryText}
@@ -90,6 +81,15 @@ function App() {
                 accentText={accentText}
                 bodyText={bodyText}
                 background={background}
+            />
+
+            <ExportSection
+                primary={primary}
+                accent={accent}
+                bodyText={bodyText}
+                background={background}
+                primaryText={primaryText}
+                accentText={accentText}
             />
         </main>
     );
