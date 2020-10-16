@@ -4,21 +4,6 @@
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.35);
 }
 
-.icon-button {
-    width: 24px;
-    height: 24px;
-    color: $text-color;
-    border: 0;
-    background-color: transparent;
-    box-shadow: none;
-    &--previous {
-        background-image: url("../assets/mi-round-arrow_back-24px.svg");
-    }
-    &--next {
-        background-image: url("../assets/mi-round-arrow_forward-24px.svg");
-    }
-}
-
 .dark-button {
     color: $dark-button-text-color;
     background-color: $dark-button-background;

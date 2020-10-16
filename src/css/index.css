@@ -65,7 +65,7 @@ input[type="text"] {
   width: 107px;
   height: 27px;
   text-align: center;
-  color: #cccccc;
+  color: #ccc;
   border: 0.5px solid #5a5a5a;
   background: #0d0d0d;
 }
@@ -75,7 +75,7 @@ textarea {
   width: clamp(320px, 90%, 400px);
   height: 150px;
   padding: 8px;
-  color: #cccccc;
+  color: #ccc;
   border: 0;
   border-radius: 8px;
   background-color: #0d0d0d;
@@ -90,26 +90,8 @@ textarea {
           box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.35);
 }
 
-.icon-button {
-  width: 24px;
-  height: 24px;
-  color: #f7f7f7;
-  border: 0;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.icon-button--previous {
-  background-image: url("../assets/mi-round-arrow_back-24px.svg");
-}
-
-.icon-button--next {
-  background-image: url("../assets/mi-round-arrow_forward-24px.svg");
-}
-
 .dark-button {
-  color: #ffffff;
+  color: #fff;
   background-color: #757575;
 }
 
@@ -285,15 +267,19 @@ textarea {
   grid-area: head;
 }
 
-.accent-section .icon-button {
+.accent-section__nav-button {
   width: 24px;
   height: 24px;
   padding: 0;
+  border: 0;
   background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-.accent-section .icon-button--previous {
+.accent-section__nav-button--previous {
   margin-right: 20px;
+  background-image: url("../assets/mi-round-arrow_back-24px.svg");
   -ms-grid-column-align: end;
       justify-self: end;
   -ms-grid-row: 2;
@@ -301,8 +287,9 @@ textarea {
   grid-area: prev;
 }
 
-.accent-section .icon-button--next {
+.accent-section__nav-button--next {
   margin-left: 20px;
+  background-image: url("../assets/mi-round-arrow_forward-24px.svg");
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-grid-row: 2;
@@ -350,6 +337,7 @@ textarea {
 .accent-color-scheme__header {
   font-size: 1.25em;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .accent-color-scheme__colors-container {
@@ -543,7 +531,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 200px;
+  width: 100%;
   height: 100px;
   margin-top: 20px;
 }

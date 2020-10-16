@@ -60,13 +60,13 @@ function AccentSection({ primary, accent, onAccentChange }) {
 
             <button
                 onClick={previousScheme}
-                className="icon-button icon-button--previous"
+                className="accent-section__nav-button accent-section__nav-button--previous"
                 aria-label="See previous color scheme"
             ></button>
 
             <button
                 onClick={nextScheme}
-                className="icon-button icon-button--next"
+                className="accent-section__nav-button accent-section__nav-button--next"
                 aria-label="See next color scheme"
             ></button>
 
