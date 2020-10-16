@@ -45,14 +45,20 @@ export default function ContrastSection({
                 </p>
             </div>
 
-            <button
-                className="level-button"
-                aria-label={`Switch level to ${level === "AA" ? "AAA" : "AA"}`}
-                onClick={changeLevel}
-            >
-                <span className={level === "AA" ? "active" : ""}>AA</span>
-                <span className={level === "AAA" ? "active" : ""}>AAA</span>
-            </button>
+            <div className="level-change-container">
+                <p>Select your standard:</p>
+
+                <button
+                    className="level-button"
+                    aria-label={`Switch level to ${
+                        level === "AA" ? "AAA" : "AA"
+                    }`}
+                    onClick={changeLevel}
+                >
+                    <span className={level === "AA" ? "active" : ""}>AA</span>
+                    <span className={level === "AAA" ? "active" : ""}>AAA</span>
+                </button>
+            </div>
 
             <div className="contrast-panels">
                 <GraphicContrast color1={primary} color2={accent} />

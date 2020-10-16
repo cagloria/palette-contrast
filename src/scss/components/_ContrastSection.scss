@@ -18,22 +18,34 @@
     margin: 0 auto;
     text-align: center;
     grid-area: i;
+    > *:first-child {
+        margin-top: 0;
+    }
     @media only screen and (min-width: 426px) {
         width: 50%;
         width: clamp(45ch, 80%, 70ch);
     }
 }
 
-.level-button {
-    margin: 0 auto;
+.level-change-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     grid-area: b;
-    span:first-child {
-        margin-right: 20px;
+    p {
+        text-align: center;
     }
 
-    .active {
-        font-weight: bold;
-        border-bottom: 1px solid $text-color;
+    button {
+        margin: 0 auto;
+        span:first-child {
+            margin-right: 20px;
+        }
+
+        .active {
+            font-weight: bold;
+            border-bottom: 1px solid $text-color;
+        }
     }
 }
 
