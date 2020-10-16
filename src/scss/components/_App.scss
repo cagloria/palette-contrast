@@ -1,7 +1,7 @@
 .App {
     display: grid;
-    grid-template-columns: 1fr;
     padding: 40px 7vw;
+    grid-template-columns: 1fr;
     gap: 40px;
     grid-template-areas:
         "primary"
@@ -21,8 +21,22 @@
 
 .additional-colors-section {
     grid-area: additional;
-    display: flex;
-    flex-direction: column;
+}
+
+.additional-colors-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    label {
+        width: fit-content;
+    }
+
+    @media only screen and (min-width: 1100px) {
+        justify-content: center;
+        gap: 50px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
 }
 
 .contrast-section {

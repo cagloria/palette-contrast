@@ -7,14 +7,14 @@ function PrimaryText({ primaryText, onPrimaryTextChange }) {
     }
 
     return (
-        <div className="primary-text-select">
+        <>
             <ColorInput
                 color={primaryText}
                 fieldID="input-primary-text"
                 fieldLabel="Text on a primary background"
                 onColorChange={handlePrimaryTextChange}
             />
-        </div>
+        </>
     );
 }
 

@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 20px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    width: fit-content;
     &__preview-box {
         width: 82px;
         height: 82px;
@@ -15,6 +16,7 @@
     label {
         grid-row: 1;
         grid-column: 2;
+        margin-bottom: 10px;
     }
 
     input {

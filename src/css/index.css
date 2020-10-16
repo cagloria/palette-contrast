@@ -7,7 +7,7 @@ body {
 }
 
 section {
-  padding: 30px 5vw;
+  padding: 30px 10vw;
 }
 
 h2,
@@ -20,7 +20,8 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(1.5em, 9vw, 2.125em);
+  font-size: clamp(1.5em, 8vw, 2.125em);
+  margin-bottom: 20px;
 }
 
 h3 {
@@ -115,9 +116,9 @@ textarea {
 .App {
   display: -ms-grid;
   display: grid;
+  padding: 40px 7vw;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  padding: 40px 7vw;
   gap: 40px;
       grid-template-areas: "primary" "accent" "additional" "contrast" "export";
 }
@@ -138,13 +139,33 @@ textarea {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: additional;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+}
+
+.additional-colors-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.additional-colors-container label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media only screen and (min-width: 1100px) {
+  .additional-colors-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 50px;
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+  }
 }
 
 .contrast-section {
@@ -183,7 +204,6 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 20px;
 }
 
 .primary-section .color-input > *:first-child {
@@ -207,8 +227,11 @@ textarea {
       grid-template-columns: auto 1fr;
   -webkit-column-gap: 20px;
           column-gap: 20px;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .color-input__preview-box {
@@ -227,6 +250,7 @@ textarea {
   grid-row: 1;
   -ms-grid-column: 2;
   grid-column: 2;
+  margin-bottom: 10px;
 }
 
 .color-input input {

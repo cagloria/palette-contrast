@@ -6,7 +6,7 @@ body {
 }
 
 section {
-    padding: 30px 5vw;
+    padding: 30px 10vw;
 }
 
 // *********************************************************
@@ -21,7 +21,8 @@ h3 {
 }
 
 h2 {
-    font-size: clamp(1.5em, 9vw, 2.125em);
+    font-size: clamp(1.5em, 8vw, 2.125em);
+    margin-bottom: 20px;
 }
 
 h3 {

@@ -54,7 +54,7 @@ function App() {
 
             <section className="component-panel additional-colors-section">
                 <h2>Additional colors</h2>
-                <div>
+                <div className="additional-colors-container">
                     <BodyText
                         bodyText={bodyText}
                         onBodyTextChange={handleBodyTextChange}
