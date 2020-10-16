@@ -1,0 +1,27 @@
+.contrast-test {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 85px;
+    padding: 8px;
+    color: $text-color;
+    border-radius: 10px;
+    background-color: $contrast-test-background;
+    &__icon {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-size: contain;
+        &--passes {
+            background-color: #16e612;
+            background-image: url("../assets/mi-round-check-24px.svg");
+        }
+
+        &--fails {
+            background-color: #e93f3f;
+            background-image: url("../assets/mi-round-close-24px.svg");
+        }
+    }
+}

@@ -3,22 +3,31 @@ import tinycolor from "tinycolor2";
 
 export default function ContrastTest({ level, color1, color2, size }) {
     const [ratio, setRatio] = useState(0);
-    const [passes, setPasses] = useState("false");
+    const [passes, setPasses] = useState(false);
 
     useEffect(() => {
-        setRatio(tinycolor.readability(color1, color2));
+        const readability = tinycolor.readability(color1, color2);
+        setRatio(Number(Math.round(readability + "e3") + "e-3"));
 
         setPasses(
-            `${tinycolor.isReadable(color1, color2, {
+            tinycolor.isReadable(color1, color2, {
                 level: level,
                 size: size,
-            })}`
+            })
         );
     }, [level, color1, color2, size]);
 
     return (
-        <span>
-            {passes} {ratio}
+        <span className="contrast-test">
+            <span
+                className={`contrast-test__icon contrast-test__icon--${
+                    passes ? "passes" : "fails"
+                }`}
+                aria-label={passes ? "Passes" : "Fails"}
+            >
+                {passes}
+            </span>{" "}
+            <span className="contrast-icon__ratio">{ratio}</span>
         </span>
     );
 }

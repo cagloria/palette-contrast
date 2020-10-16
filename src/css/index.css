@@ -404,10 +404,12 @@ textarea {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-auto-rows: auto;
+  gap: 20px;
       grid-template-areas: "h" "i" "b" "p";
 }
 
 .contrast-section h2 {
+  margin-bottom: 0;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: h;
@@ -485,6 +487,42 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.contrast-test {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 85px;
+  padding: 8px;
+  color: #f7f7f7;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+
+.contrast-test__icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background-size: contain;
+}
+
+.contrast-test__icon--passes {
+  background-color: #16e612;
+  background-image: url("../assets/mi-round-check-24px.svg");
+}
+
+.contrast-test__icon--fails {
+  background-color: #e93f3f;
+  background-image: url("../assets/mi-round-close-24px.svg");
 }
 
 .graphic-panel-container {

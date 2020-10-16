@@ -14,6 +14,7 @@ $link-color: #c1c1c1;
 $button-background: #262626;
 $dark-button-background: #757575;
 $dark-button-text-color: #ffffff;
+$contrast-test-background: #1a1a1a;
 
 $input-text-color: #cccccc;
 $input-border-color: #5a5a5a;
@@ -31,4 +32,5 @@ $input-background: #0d0d0d;
 @import "./components/AccentColorScheme";
 @import "./components/ExportSection";
 @import "./components/ContrastSection";
+@import "./components/ContrastTest";
 @import "./components/GraphicContrast";
