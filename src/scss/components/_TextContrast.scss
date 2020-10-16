@@ -1,0 +1,39 @@
+.text-contrast {
+    display: grid;
+    &__panel {
+        display: grid;
+        align-items: start;
+        padding: 20px;
+        border-radius: 8px;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+        .contrast-test {
+            grid-column: 1;
+
+            &:first-child {
+                grid-row: 1;
+            }
+
+            &:last-child {
+                grid-row: 2;
+            }
+        }
+
+        p {
+            margin: 0;
+            grid-column: 2;
+        }
+    }
+
+    &__header {
+        font-size: 1.5em;
+        margin: 8px 0;
+        grid-row: 1;
+    }
+
+    &__body {
+        grid-row: 2;
+    }
+}
