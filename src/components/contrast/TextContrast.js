@@ -16,21 +16,21 @@ function TextContrast({ header, level, textColor, bgColor }) {
                 bgColor={bgColor}
                 textColor={textColor}
             >
+                <p className="text-contrast__header">Large text</p>
                 <ContrastTest
                     level={level}
                     color1={textColor}
                     color2={bgColor}
                     size="large"
                 />
-                <p className="text-contrast__header">Header</p>
 
+                <p className="text-contrast__body">Small text</p>
                 <ContrastTest
                     level={level}
                     color1={textColor}
                     color2={bgColor}
                     size="small"
                 />
-                <p className="text-contrast__body">Lorem ipsum dolor sit amet.</p>
             </Panel>
         </div>
     );

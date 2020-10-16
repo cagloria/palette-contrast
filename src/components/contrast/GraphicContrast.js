@@ -14,7 +14,12 @@ export default function GraphicContrast({ color1, color2 }) {
     return (
         <div className="graphic-contrast component-panel">
             <h3>Primary and accent</h3>
-            
+
+            <div className="graphic-contrast__colors-container">
+                <Color1 className="graphic-contrast__color-1" color={color1} />
+                <Color2 className="graphic-contrast__color-2" color={color2} />
+            </div>
+
             {/* Graphics/UI component contrast ratio is defined only in level AA
                 as 3:1, the same as large text */}
             <ContrastTest
@@ -23,11 +28,6 @@ export default function GraphicContrast({ color1, color2 }) {
                 color2={color2}
                 size="large"
             />
-
-            <div className="graphic-contrast__colors-container">
-                <Color1 className="graphic-contrast__color-1" color={color1} />
-                <Color2 className="graphic-contrast__color-2" color={color2} />
-            </div>
         </div>
     );
 }

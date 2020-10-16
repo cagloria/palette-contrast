@@ -29,7 +29,7 @@ export default function ContrastSection({
                 </p>
                 <p>
                     Large text is defined as being at least 18pt (24px) or 14pt
-                    (19px) bold. Read more about{" "}
+                    (18.7px) bold. Read more about{" "}
                     <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">
                         Level AA contrast
                     </a>
@@ -71,14 +71,14 @@ export default function ContrastSection({
                 />
 
                 <TextContrast
-                    header="Text on primary"
+                    header="Text on a primary background"
                     level={level}
                     textColor={primaryText}
                     bgColor={primary}
                 />
 
                 <TextContrast
-                    header="Text on accent"
+                    header="Text on an accent background"
                     level={level}
                     textColor={accentText}
                     bgColor={accent}
