@@ -16,13 +16,13 @@ h3 {
     font-family: $body-font;
     font-weight: normal;
     font-style: normal;
-    text-align: center;
     margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 h2 {
     font-size: clamp(1.5em, 8vw, 2.125em);
-    margin-bottom: 20px;
 }
 
 h3 {

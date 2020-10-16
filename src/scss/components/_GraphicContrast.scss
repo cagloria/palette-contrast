@@ -1,18 +1,22 @@
-.graphic-panel-container {
-    height: 100px;
-    width: 200px;
+.graphic-contrast {
     display: flex;
-    > div {
-        width: 50%;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 10vw;
+    &__colors-container {
+        display: flex;
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
     }
-}
 
-.graphic-panel {
-    &-1 {
+    &__color-1 {
+        width: 50%;
         border-radius: 8px 0 0 8px;
     }
 
-    &-2 {
+    &__color-2 {
+        width: 50%;
         border-radius: 0 8px 8px 0;
     }
 }

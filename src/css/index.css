@@ -15,13 +15,13 @@ h3 {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
-  text-align: center;
   margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 h2 {
   font-size: clamp(1.5em, 8vw, 2.125em);
-  margin-bottom: 20px;
 }
 
 h3 {
@@ -525,22 +525,35 @@ textarea {
   background-image: url("../assets/mi-round-close-24px.svg");
 }
 
-.graphic-panel-container {
-  height: 100px;
-  width: 200px;
+.graphic-contrast {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 10vw;
 }
 
-.graphic-panel-container > div {
+.graphic-contrast__colors-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.graphic-contrast__color-1 {
   width: 50%;
-}
-
-.graphic-panel-1 {
   border-radius: 8px 0 0 8px;
 }
 
-.graphic-panel-2 {
+.graphic-contrast__color-2 {
+  width: 50%;
   border-radius: 0 8px 8px 0;
 }
