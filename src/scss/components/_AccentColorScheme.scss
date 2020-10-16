@@ -7,11 +7,15 @@
     &__colors-container {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+        width: 75%;
+        width: clamp(175px, 75%, 300px);
         > * {
-            margin-right: 10px;
-            margin-bottom: 10px;
-            &:last-child {
-                margin-right: 0;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            @media only screen and (min-width: 426px) {
+                margin-right: 10px;
+                margin-bottom: 10px;
             }
         }
     }
