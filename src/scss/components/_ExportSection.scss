@@ -1,4 +1,15 @@
 .export-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    > *:not(h2) {
+        margin-bottom: 30px;
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
     &__fieldset {
         display: flex;
         flex-wrap: wrap;

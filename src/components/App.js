@@ -10,11 +10,11 @@ import ExportSection from "./export/ExportSection";
 
 function App() {
     const [primary, setPrimary] = useState("#10a381");
-    const [accent, setAccent] = useState("#b50c00");
+    const [accent, setAccent] = useState("#3710a3");
     const [bodyText, setBodyText] = useState("#1f1f1f");
     const [background, setBackground] = useState("#e3e3e3");
     const [primaryText, setPrimaryText] = useState("#1f1f1f");
-    const [accentText, setAccentText] = useState("#1f1f1f");
+    const [accentText, setAccentText] = useState("#e3e3e3");
 
     function handlePrimaryChange(value) {
         setPrimary(value);
