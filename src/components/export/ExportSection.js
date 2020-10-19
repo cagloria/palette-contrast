@@ -71,9 +71,10 @@ export default function ExportSection({
 
             <fieldset
                 onChange={handleRadioChange}
-                className="export-format-fieldset"
+                className="export-section__fieldset"
             >
                 <legend>Select a format:</legend>
+
                 <label>
                     <input
                         type="radio"
@@ -83,10 +84,12 @@ export default function ExportSection({
                     />
                     CSS
                 </label>
+
                 <label>
                     <input type="radio" name="export-format" value="scss" />
                     SCSS
                 </label>
+
                 <label>
                     <input type="radio" name="export-format" value="less" />
                     Less

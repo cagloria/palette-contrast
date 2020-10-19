@@ -1,12 +1,14 @@
-.export-format-fieldset {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 350px;
-    label {
-        margin-right: 28px;
-        input[type="radio"] {
-            margin-right: 8px;
+.export-section {
+    &__fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 350px;
+        label {
+            margin-right: 28px;
+            input[type="radio"] {
+                margin-right: 8px;
+            }
         }
     }
 }
