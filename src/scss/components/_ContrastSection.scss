@@ -25,21 +25,11 @@
         "p";
 
     @include contrast-grid-areas;
-    @media only screen and (min-width: 1700px) {
-        @include contrast-grid-areas;
-        grid-template-columns: 1fr auto;
-        grid-template-areas:
-            "h h"
-            "i p"
-            "i p";
-    }
-
     h2 {
         margin-bottom: 0;
     }
 
     &__information {
-        margin: 0 auto 20px;
         text-align: center;
         p:first-child {
             margin-top: 0;
@@ -47,14 +37,6 @@
 
         p:last-child {
             margin-bottom: 0;
-        }
-
-        @media only screen and (min-width: 426px) {
-            max-width: 70ch;
-        }
-
-        @media only screen and (min-width: 1024px) {
-            text-align: left;
         }
     }
 
@@ -89,10 +71,48 @@
             display: flex;
             flex-direction: column;
         }
+    }
 
-        @media only screen and (min-width: 880px) {
+    @media only screen and (min-width: 426px) {
+        &__information {
+            max-width: 70ch;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        &__information {
+            min-width: 40ch;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        &__information {
+            text-align: left;
+        }
+    }
+
+    @media only screen and (min-width: 880px) {
+        &__panels {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
+        }
+    }
+
+    @media only screen and (min-width: 1700px) {
+        grid-template-columns: auto auto;
+        gap: 40px 60px;
+        grid-template-areas:
+            "h h"
+            "i p"
+            "i p";
+
+        @include contrast-grid-areas;
+        &__information {
+            justify-self: end;
+        }
+
+        &__panels {
+            justify-self: start;
         }
     }
 }

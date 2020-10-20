@@ -48,17 +48,15 @@
     }
 
     @media only screen and (min-width: 1440px) {
-        @include app-grid-areas;
+        padding-right: 19vw;
+        padding-left: 19vw;
         grid-template-areas:
             "primary additional"
             "accent additional"
             "contrast contrast"
             "export export";
-    }
 
-    @media only screen and (min-width: 2560px) {
-        padding-right: 21vw;
-        padding-left: 21vw;
+        @include app-grid-areas;
     }
 }
 
