@@ -3,6 +3,7 @@
     &__panel {
         display: grid;
         align-items: start;
+        height: 100%;
         padding: 20px;
         border-radius: 8px;
         grid-template-columns: 1fr auto;
