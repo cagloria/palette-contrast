@@ -12,7 +12,13 @@ section {
 
 @media only screen and (min-width: 426px) {
   section {
-    padding: 30px 9vw;
+    padding: 40px 9vw;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 50px 4vw;
   }
 }
 
@@ -113,6 +119,20 @@ textarea {
       grid-template-areas: "primary" "accent" "additional" "contrast" "export";
 }
 
+@media only screen and (min-width: 768px) {
+  .App {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "primary accent" "additional additional" "contrast contrast" "export export";
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    padding: 70px 11vw;
+  }
+}
+
 .primary-section {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -145,7 +165,7 @@ textarea {
   width: fit-content;
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 900px) {
   .additional-colors-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -538,6 +558,22 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .contrast-section__panels > div {
+    padding: 30px 4vw;
+  }
+}
+
+@media only screen and (min-width: 880px) {
+  .contrast-section__panels {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    gap: 30px;
+  }
 }
 
 .contrast-test {

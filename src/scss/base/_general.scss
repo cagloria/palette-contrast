@@ -8,7 +8,11 @@ body {
 section {
     padding: 30px 5vw;
     @media only screen and (min-width: 426px) {
-        padding: 30px 9vw;
+        padding: 40px 9vw;
+    }
+
+    @media only screen and (min-width: 768px) {
+        padding: 50px 4vw;
     }
 }
 
