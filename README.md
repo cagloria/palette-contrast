@@ -17,6 +17,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Color Selection
 
+<br/>
+<img src="./docs/screenshot_1024-colors.png" alt="Screenshot of the app depicting the color selection of a primary color, accent color, and additional colors, which are the background, body text, text on primary, and text on accent" width="600" style="display: block; margin: 0 auto" />
+<br/>
+
 1.  Choose a primary color
 2.  Select an accent color from a number of color schemes (or write in your own)
 3.  Select a neutral background color and neutral text color
@@ -25,10 +29,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Contrast Check
 
+<br/>
+<img src="./docs/screenshot_1024-contrast.png" alt="Screenshot of the app depicting the contrast section, which shows a pass or fail state of the primary and accent together, the body text on the background, text on primary, and text on accent" width="600" style="display: block; margin: 0 auto" />
+<br/>
+
 6.  Choose between Level AA or AAA contrast
 7.  Check the contrast between a text color and its corresponding background color
 
 ### Export
+
+<br/>
+<img src="./docs/screenshot_1024-export.png" alt="Screenshot of the app depicting the export section with options to choose between CSS, Sass, or Less formatting" width="600" style="display: block; margin: 0 auto" />
+<br/>
 
 8.  Export the color palette into CSS, Sass, or Less
 
