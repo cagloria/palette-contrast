@@ -534,6 +534,14 @@ textarea {
   height: 150px;
 }
 
+@media only screen and (min-width: 1440px) {
+  .export-section {
+    width: clamp(500px, 50%, 1000px);
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
 .contrast-section {
   display: -ms-grid;
   display: grid;
@@ -553,7 +561,7 @@ textarea {
 }
 
 .contrast-section__information {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   text-align: center;
   -ms-grid-row: 2;
   -ms-grid-column: 1;

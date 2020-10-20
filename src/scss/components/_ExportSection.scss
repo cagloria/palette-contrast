@@ -38,4 +38,9 @@
         max-width: 350px;
         height: 150px;
     }
+
+    @media only screen and (min-width: 1440px) {
+        width: clamp(500px, 50%, 1000px);
+        justify-self: center;
+    }
 }
