@@ -20,7 +20,7 @@ export default function ContrastSection({
         <section className="contrast-section">
             <h2>Contrast check</h2>
 
-            <div className="contrast-information">
+            <div className="contrast-section__information">
                 <p>
                     Level AA requires a contrast ratio of 4.5:1 for normal text
                     and 3:1 for large text, and a contrast ratio of 3:1 for user
@@ -45,7 +45,7 @@ export default function ContrastSection({
                 </p>
             </div>
 
-            <div className="level-change-container">
+            <div className="contrast-section__level-change">
                 <p>Select your standard:</p>
 
                 <button
@@ -60,7 +60,7 @@ export default function ContrastSection({
                 </button>
             </div>
 
-            <div className="contrast-panels">
+            <div className="contrast-section__panels">
                 <GraphicContrast color1={primary} color2={accent} />
 
                 <TextContrast

@@ -6,7 +6,10 @@ body {
 }
 
 section {
-    padding: 30px 10vw;
+    padding: 30px 5vw;
+    @media only screen and (min-width: 426px) {
+        padding: 30px 9vw;
+    }
 }
 
 // *********************************************************
@@ -57,6 +60,7 @@ button {
 }
 
 fieldset {
+    margin: 0;
     border: 0;
 }
 
@@ -74,8 +78,6 @@ input[type="text"] {
 
 textarea {
     font-size: 1.2em;
-    width: clamp(320px, 90%, 400px);
-    height: 150px;
     padding: 8px;
     color: $input-text-color;
     border: 0;

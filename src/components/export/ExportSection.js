@@ -75,29 +75,32 @@ export default function ExportSection({
             >
                 <legend>Select a format:</legend>
 
-                <label>
-                    <input
-                        type="radio"
-                        name="export-format"
-                        value="css"
-                        defaultChecked
-                    />
-                    CSS
-                </label>
+                <div>
+                    <label>
+                        <input
+                            type="radio"
+                            name="export-format"
+                            value="css"
+                            defaultChecked
+                        />
+                        CSS
+                    </label>
 
-                <label>
-                    <input type="radio" name="export-format" value="scss" />
-                    SCSS
-                </label>
+                    <label>
+                        <input type="radio" name="export-format" value="scss" />
+                        SCSS
+                    </label>
 
-                <label>
-                    <input type="radio" name="export-format" value="less" />
-                    Less
-                </label>
+                    <label>
+                        <input type="radio" name="export-format" value="less" />
+                        Less
+                    </label>
+                </div>
             </fieldset>
 
             <textarea
                 id="export-textarea"
+                className="export-section__textarea"
                 value={textareaValue}
                 onChange={handleTextareaChange}
             />
