@@ -12,7 +12,7 @@ export default function ExportSection({
     const [radioValue, setRadioValue] = useState("css");
 
     useEffect(() => {
-        if (radioValue === "scss") {
+        if (radioValue === "sass") {
             setTextareaValue(
                 `$primary: ${primary};\n` +
                     `$accent: ${accent};\n` +
@@ -87,8 +87,8 @@ export default function ExportSection({
                     </label>
 
                     <label>
-                        <input type="radio" name="export-format" value="scss" />
-                        SCSS
+                        <input type="radio" name="export-format" value="sass" />
+                        Sass
                     </label>
 
                     <label>

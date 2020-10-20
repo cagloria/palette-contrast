@@ -11,7 +11,7 @@ function PrimaryText({ primaryText, onPrimaryTextChange }) {
             <ColorInput
                 color={primaryText}
                 fieldID="input-primary-text"
-                fieldLabel="Text on a primary background"
+                fieldLabel="Text on primary"
                 onColorChange={handlePrimaryTextChange}
             />
         </>

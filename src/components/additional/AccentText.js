@@ -11,7 +11,7 @@ function AccentText({ accentText, onAccentTextChange }) {
             <ColorInput
                 color={accentText}
                 fieldID="input-accent-text"
-                fieldLabel="Text on an accent background"
+                fieldLabel="Text on accent"
                 onColorChange={handleAccentTextChange}
             />
         </>

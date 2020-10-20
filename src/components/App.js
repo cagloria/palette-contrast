@@ -13,8 +13,8 @@ function App() {
     const [accent, setAccent] = useState("#3710a3");
     const [bodyText, setBodyText] = useState("#1f1f1f");
     const [background, setBackground] = useState("#e3e3e3");
-    const [primaryText, setPrimaryText] = useState("#1f1f1f");
-    const [accentText, setAccentText] = useState("#e3e3e3");
+    const [primaryText, setPrimaryText] = useState("#333333");
+    const [accentText, setAccentText] = useState("#cfcfcf");
 
     function handlePrimaryChange(value) {
         setPrimary(value);

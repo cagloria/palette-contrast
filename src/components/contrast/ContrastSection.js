@@ -75,14 +75,14 @@ export default function ContrastSection({
                 />
 
                 <TextContrast
-                    header="Text on a primary background"
+                    header="Text on primary"
                     level={level}
                     textColor={primaryText}
                     bgColor={primary}
                 />
 
                 <TextContrast
-                    header="Text on an accent background"
+                    header="Text on accent"
                     level={level}
                     textColor={accentText}
                     bgColor={accent}
