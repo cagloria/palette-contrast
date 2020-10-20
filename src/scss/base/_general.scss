@@ -6,6 +6,7 @@ body {
 }
 
 section {
+    box-sizing: border-box;
     padding: 30px 5vw;
     @media only screen and (min-width: 426px) {
         padding: 40px 9vw;
@@ -13,6 +14,11 @@ section {
 
     @media only screen and (min-width: 768px) {
         padding: 50px 4vw;
+    }
+
+    @media only screen and (min-width: 2560px) {
+        padding-top: 70px;
+        padding-bottom: 70px;
     }
 }
 

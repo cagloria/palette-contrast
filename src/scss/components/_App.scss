@@ -21,6 +21,19 @@
     @media only screen and (min-width: 1000px) {
         padding: 70px 11vw;
     }
+
+    @media only screen and (min-width: 1440px) {
+        grid-template-areas:
+            "primary additional"
+            "accent additional"
+            "contrast contrast"
+            "export export";
+    }
+
+    @media only screen and (min-width: 2560px) {
+        padding-right: 21vw;
+        padding-left: 21vw;
+    }
 }
 
 .primary-section {
@@ -33,6 +46,12 @@
 
 .additional-colors-section {
     grid-area: additional;
+
+    @media only screen and (min-width: 1440px) {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 .additional-colors-container {
@@ -43,9 +62,12 @@
         width: fit-content;
     }
 
-    @media only screen and (min-width: 900px) {
-        justify-content: center;
+    @media only screen and (min-width: 768px) {
         gap: 50px;
+    }
+
+    @media only screen and (min-width: 900px) and (max-width: 1439px) {
+        justify-content: center;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto);
     }

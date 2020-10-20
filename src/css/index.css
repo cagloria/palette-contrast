@@ -7,6 +7,8 @@ body {
 }
 
 section {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 30px 5vw;
 }
 
@@ -19,6 +21,13 @@ section {
 @media only screen and (min-width: 768px) {
   section {
     padding: 50px 4vw;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
 }
 
@@ -133,6 +142,19 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .App {
+        grid-template-areas: "primary additional" "accent additional" "contrast contrast" "export export";
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .App {
+    padding-right: 21vw;
+    padding-left: 21vw;
+  }
+}
+
 .primary-section {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -151,6 +173,21 @@ textarea {
   grid-area: additional;
 }
 
+@media only screen and (min-width: 1440px) {
+  .additional-colors-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .additional-colors-container {
   display: -ms-grid;
   display: grid;
@@ -165,12 +202,17 @@ textarea {
   width: fit-content;
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
+  .additional-colors-container {
+    gap: 50px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1439px) {
   .additional-colors-container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 50px;
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
     -ms-grid-rows: (auto)[2];
@@ -336,6 +378,7 @@ textarea {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
