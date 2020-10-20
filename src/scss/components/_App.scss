@@ -1,3 +1,25 @@
+@mixin app-grid-areas {
+    .primary-section {
+        grid-area: primary;
+    }
+
+    .accent-section {
+        grid-area: accent;
+    }
+
+    .additional-colors-section {
+        grid-area: additional;
+    }
+
+    .contrast-section {
+        grid-area: contrast;
+    }
+
+    .export-section {
+        grid-area: export;
+    }
+}
+
 .App {
     display: grid;
     padding: 40px 7vw;
@@ -10,6 +32,7 @@
         "contrast"
         "export";
     @media only screen and (min-width: 768px) {
+        @include app-grid-areas;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "primary accent"
@@ -23,6 +46,7 @@
     }
 
     @media only screen and (min-width: 1440px) {
+        @include app-grid-areas;
         grid-template-areas:
             "primary additional"
             "accent additional"
@@ -36,17 +60,7 @@
     }
 }
 
-.primary-section {
-    grid-area: primary;
-}
-
-.accent-section {
-    grid-area: accent;
-}
-
 .additional-colors-section {
-    grid-area: additional;
-
     @media only screen and (min-width: 1440px) {
         display: flex;
         align-items: center;
@@ -71,12 +85,4 @@
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto);
     }
-}
-
-.contrast-section {
-    grid-area: contrast;
-}
-
-.export-section {
-    grid-area: export;
 }

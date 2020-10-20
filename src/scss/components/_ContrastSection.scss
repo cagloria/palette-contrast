@@ -7,7 +7,6 @@
     grid-template-areas:
         "h"
         "i"
-        "b"
         "p";
     h2 {
         margin-bottom: 0;
@@ -33,7 +32,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        grid-area: b;
         p {
             margin-top: 0;
             text-align: center;
