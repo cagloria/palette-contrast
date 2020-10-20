@@ -34,16 +34,16 @@
             grid-area: next;
         }
     }
-}
 
-.accent-input-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    grid-area: input;
-    *:first-child {
-        margin-bottom: 10px;
+    &__input-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        grid-area: input;
+        *:first-child {
+            margin-bottom: 10px;
+        }
     }
 }
 

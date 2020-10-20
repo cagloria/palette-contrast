@@ -42,6 +42,8 @@ function App() {
 
     return (
         <main className="App">
+            <h1 className="sighted-invisible">Palette Contrast</h1>
+
             <PrimarySection
                 primary={primary}
                 onPrimaryChange={handlePrimaryChange}

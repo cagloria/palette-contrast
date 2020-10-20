@@ -77,7 +77,7 @@ function AccentSection({ primary, accent, onAccentChange }) {
                 onAccentSelect={handleAccentButtonSelect}
             />
 
-            <div className="accent-input-container">
+            <div className="accent-section__input-container">
                 <label htmlFor="input-accent">
                     Or type in a custom accent color:
                 </label>

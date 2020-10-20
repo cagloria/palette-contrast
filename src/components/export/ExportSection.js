@@ -103,6 +103,7 @@ export default function ExportSection({
                 className="export-section__textarea"
                 value={textareaValue}
                 onChange={handleTextareaChange}
+                aria-label="Export content"
             />
 
             <button onClick={copyColors} className="dark-button">

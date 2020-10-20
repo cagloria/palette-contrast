@@ -22,6 +22,7 @@ function AccentButton({ color, currentAccent, onAccentSelect }) {
         <Color
             className="accent-button"
             color={color}
+            aria-label={color}
             isSelected={isSelected}
             onClick={handleAccentSelect}
         ></Color>

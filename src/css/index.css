@@ -118,6 +118,11 @@ textarea {
   background-color: #757575;
 }
 
+.sighted-invisible {
+  position: absolute;
+  top: -200vh;
+}
+
 .App {
   display: -ms-grid;
   display: grid;
@@ -393,7 +398,7 @@ textarea {
   grid-area: next;
 }
 
-.accent-input-container {
+.accent-section__input-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,7 +416,7 @@ textarea {
   grid-area: input;
 }
 
-.accent-input-container *:first-child {
+.accent-section__input-container *:first-child {
   margin-bottom: 10px;
 }
 
