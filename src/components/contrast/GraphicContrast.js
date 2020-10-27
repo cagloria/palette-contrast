@@ -12,7 +12,7 @@ const Color2 = styled.div`
 
 export default function GraphicContrast({ color1, color2 }) {
     return (
-        <div className="graphic-contrast component-panel">
+        <div className="graphic-contrast">
             <h3>Primary and accent</h3>
 
             <div className="graphic-contrast__colors-container">
