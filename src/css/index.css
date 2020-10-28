@@ -456,8 +456,8 @@ textarea {
 
 .accent-color-scheme__header {
   font-size: 1.25em;
-  text-align: center;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .accent-color-scheme__colors-container {
@@ -471,6 +471,7 @@ textarea {
           justify-content: center;
   width: 75%;
   width: clamp(175px, 75%, 300px);
+  margin-left: 15px;
 }
 
 .accent-color-scheme__colors-container > * {

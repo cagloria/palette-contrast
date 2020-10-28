@@ -1,8 +1,8 @@
 .accent-color-scheme {
     &__header {
         font-size: 1.25em;
-        text-align: center;
         margin-bottom: 0;
+        text-align: center;
     }
 
     &__colors-container {
@@ -11,6 +11,7 @@
         justify-content: center;
         width: 75%;
         width: clamp(175px, 75%, 300px);
+        margin-left: 15px;
         > * {
             margin-right: 15px;
             margin-bottom: 15px;

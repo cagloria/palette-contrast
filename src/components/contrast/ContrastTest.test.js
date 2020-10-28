@@ -3,6 +3,9 @@ import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 import ContrastTest from "./ContrastTest";
 
+const color1 = "#10a381";
+const color2 = "#333333";
+
 let container = null;
 
 beforeEach(() => {
@@ -16,11 +19,25 @@ afterEach(() => {
     container = null;
 });
 
-it("renders contrast test", () => {
-    const color1 = "#10a381";
-    const color2 = "#333333";
-    const ratioClass = "span.contrast-icon__ratio";
-    const iconClass = "span.contrast-test__icon";
+it("renders contrast ratio with Level AA and large text", () => {
+    const ratioEl = "span.contrast-icon__ratio";
+
+    act(() => {
+        render(
+            <ContrastTest
+                level="AA"
+                color1={color1}
+                color2={color2}
+                size="large"
+            />,
+            container
+        );
+    });
+    expect(container.querySelector(ratioEl).textContent).toBe("3.96");
+});
+
+it("renders pass/fail icon", () => {
+    const iconEl = "span.contrast-test__icon";
     const iconPassesClass = "contrast-test__icon--passes";
 
     act(() => {
@@ -34,41 +51,13 @@ it("renders contrast test", () => {
             container
         );
     });
-    expect(container.querySelector(ratioClass).textContent).toBe("3.96");
-
-    act(() => {
-        render(
-            <ContrastTest
-                level="AA"
-                color1={color1}
-                color2={color2}
-                size="large"
-            />,
-            container
-        );
-    });
     expect(
-        container.querySelector(iconClass).classList.contains(iconPassesClass)
+        container.querySelector(iconEl).classList.contains(iconPassesClass)
     ).toBe(true);
 
     act(() => {
         render(
             <ContrastTest
-                level="AAA"
-                color1={color1}
-                color2={color2}
-                size="large"
-            />,
-            container
-        );
-    });
-    expect(
-        container.querySelector(iconClass).classList.contains(iconPassesClass)
-    ).toBe(false);
-
-    act(() => {
-        render(
-            <ContrastTest
                 level="AA"
                 color1={color1}
                 color2={color2}
@@ -78,7 +67,22 @@ it("renders contrast test", () => {
         );
     });
     expect(
-        container.querySelector(iconClass).classList.contains(iconPassesClass)
+        container.querySelector(iconEl).classList.contains(iconPassesClass)
+    ).toBe(false);
+
+    act(() => {
+        render(
+            <ContrastTest
+                level="AAA"
+                color1={color1}
+                color2={color2}
+                size="large"
+            />,
+            container
+        );
+    });
+    expect(
+        container.querySelector(iconEl).classList.contains(iconPassesClass)
     ).toBe(false);
 
     act(() => {
@@ -93,6 +97,6 @@ it("renders contrast test", () => {
         );
     });
     expect(
-        container.querySelector(iconClass).classList.contains(iconPassesClass)
+        container.querySelector(iconEl).classList.contains(iconPassesClass)
     ).toBe(false);
 });
